@@ -68,3 +68,9 @@ sudo apt-get install -y python-pip
 
 BLUE "Removing boilerplate home directories..."
 rmdir ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
+
+BLUE "Installing guake..."
+sudo apt-get install -y guake
+
+BLUE "Installing openvpn..."
+sudo apt-get install -y openvpn
