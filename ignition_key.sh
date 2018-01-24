@@ -77,3 +77,6 @@ sudo apt-get install -y openvpn
 
 BLUE "Installing nmap..."
 sudo apt-get install -y nmap
+
+BLUE "Installing docker..."
+sudo apt-get install -y docker.io
