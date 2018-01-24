@@ -74,3 +74,6 @@ sudo apt-get install -y guake
 
 BLUE "Installing openvpn..."
 sudo apt-get install -y openvpn
+
+BLUE "Installing nmap..."
+sudo apt-get install -y nmap
