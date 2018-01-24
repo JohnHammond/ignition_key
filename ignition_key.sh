@@ -80,3 +80,5 @@ sudo apt-get install -y nmap
 
 BLUE "Installing docker..."
 sudo apt-get install -y docker.io
+sudo groupadd docker
+sudo usermod -aG docker `logname`
