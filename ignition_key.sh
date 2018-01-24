@@ -8,22 +8,22 @@ BLUE=`tput bold && tput setaf 4`
 NC=`tput sgr0`
 
 function RED(){
-	echo "${RED}${1}${NC}"
+	echo -e "\n${RED}${1}${NC}"
 }
 function GREEN(){
-	echo "${GREEN}${1}${NC}"
+	echo -e "\n${GREEN}${1}${NC}"
 }
 function YELLOW(){
-	echo "${YELLOW}${1}${NC}"
+	echo -e "\n${YELLOW}${1}${NC}"
 }
 function BLUE(){
-	echo "${BLUE}${1}${NC}"
+	echo -e "\n${BLUE}${1}${NC}"
 }
 
 # Testing if root...
 if [ $UID -ne 0 ]
 then
-	RED "You must run this script as root!"
+	RED "You must run this script as root!" && echo
 	exit
 fi
 
@@ -47,4 +47,11 @@ sudo apt install -y terminator
 
 BLUE "Setting terminator as the default terminal emulator..."
 sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
+
+BLUE "Forcing a color prompt in ~/.bashrc..."
+grep "export PS1" ~/.bashrc
+if [ $? -eq 1 ]
+then
+	echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
+fi
 
