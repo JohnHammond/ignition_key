@@ -63,3 +63,8 @@ sudo apt-get install -y simplescreenrecorder
 BLUE "Installing task..."
 sudo apt-get install -y taskwarrior
 
+BLUE "Installing pip..."
+sudo apt-get install -y python-pip
+
+BLUE "Removing boilerplate home directories..."
+rmdir ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
