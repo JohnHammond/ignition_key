@@ -55,3 +55,8 @@ then
 	echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
 fi
 
+BLUE "Installing SimpleScreenRecorder..."
+echo "" | sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+sudo apt-get update
+sudo apt-get install -y simplescreenrecorder
+
