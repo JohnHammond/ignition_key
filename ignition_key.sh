@@ -86,9 +86,12 @@ sudo usermod -aG docker `logname`
 BLUE "Installing curl..."
 sudo apt-get install -y curl
 
-BLUE "Installing gpaint..."
-sudo apt-get install -y gpaint
+BLUE "Installing pinta..."
+sudo apt-get install -y pinta
 
 BLUE "Installing exiftool..."
 sudo apt-get install -y exiftool
+
+BLUE "Installing Python PIL..."
+sudo apt-get install -y python-pil
 
