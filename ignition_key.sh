@@ -95,3 +95,6 @@ sudo apt-get install -y exiftool
 BLUE "Installing Python PIL..."
 sudo apt-get install -y python-pil
 
+BLUE "Installing sqlitebrowser..."
+sudo apt-get install -y sqlitebrowser
+
