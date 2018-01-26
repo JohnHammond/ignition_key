@@ -98,3 +98,6 @@ sudo apt-get install -y python-pil
 BLUE "Installing sqlitebrowser..."
 sudo apt-get install -y sqlitebrowser
 
+BLUE "Installing Wireshark..."
+sudo apt-get install -y wireshark
+
