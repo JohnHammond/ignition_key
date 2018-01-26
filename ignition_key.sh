@@ -29,6 +29,8 @@ fi
 
 
 
+
+
 BLUE "Updating repositories..."
 sudo apt update
 
@@ -101,3 +103,19 @@ sudo apt-get install -y sqlitebrowser
 BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
 
+BLUE "Install Real VNC Viewer..."
+wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
+dpkg -i vnc_viewer.deb
+rm vnc_viewer.deb
+
+BLUE "Install Real VNC Connect (Server)..."
+wget 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64.deb' -O vnc_server.deb
+dpkg -i vnc_server.deb
+rm vnc_server.deb
+
+BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..."
+grep "vncserver-x11-serviced.service PS1" /etc/rc.local
+if [ $? -eq 1 ]
+then
+	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
+fi
