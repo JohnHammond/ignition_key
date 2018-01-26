@@ -117,5 +117,5 @@ BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..
 grep "vncserver-x11-serviced.service PS1" /etc/rc.local
 if [ $? -eq 1 ]
 then
-	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
+	echo "systemctl start vncserver-x11-serviced.service" >> /etc/rc.local
 fi
