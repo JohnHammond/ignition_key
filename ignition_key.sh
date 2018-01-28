@@ -29,8 +29,6 @@ fi
 
 
 
-
-
 BLUE "Updating repositories..."
 sudo apt update
 
@@ -119,3 +117,14 @@ if [ $? -eq 1 ]
 then
 	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
 fi
+
+BLUE "Installing Atom..."
+wget "https://atom.io/download/deb" -O atom.deb
+dpkg -i atom.deb
+rm atom.deb
+
+BLUE "Installing python-requests..."
+pip install requests
+
+BLUE "Installing idle..."
+sudo apt install -y idle
