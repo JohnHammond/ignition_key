@@ -115,7 +115,6 @@ BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..
 grep "vncserver-x11-serviced.service PS1" /etc/rc.local
 if [ $? -eq 1 ]
 then
-<<<<<<< HEAD
 	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
 fi
 
@@ -129,7 +128,3 @@ pip install requests
 
 BLUE "Installing idle..."
 sudo apt install -y idle
-=======
-	echo "systemctl start vncserver-x11-serviced.service" >> /etc/rc.local
-fi
->>>>>>> e77cce55419588fdd87ec8a6326221fe48ade6c9
