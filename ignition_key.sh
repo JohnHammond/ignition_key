@@ -128,3 +128,11 @@ pip install requests
 
 BLUE "Installing idle..."
 sudo apt install -y idle
+
+BLUE "Installing xclip..."
+sudo apt install -y xclip
+grep "alias xclip" ~/.bashrc
+if [ $? -eq 1 ]
+then
+	echo "alias xclip=xclip -selection clipboard" >> ~/.bashrc
+fi
