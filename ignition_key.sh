@@ -134,5 +134,5 @@ sudo apt install -y xclip
 grep "alias xclip" ~/.bashrc
 if [ $? -eq 1 ]
 then
-	echo "alias xclip=xclip -selection clipboard" >> ~/.bashrc
+	echo "alias xclip='xclip -selection clipboard'" >> ~/.bashrc
 fi
