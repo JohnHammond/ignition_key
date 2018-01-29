@@ -136,3 +136,6 @@ if [ $? -eq 1 ]
 then
 	echo "alias xclip='xclip -selection clipboard'" >> ~/.bashrc
 fi
+
+BLUE "Installing Python flask..."
+sudo pip install flask
