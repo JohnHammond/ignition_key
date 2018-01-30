@@ -139,3 +139,19 @@ fi
 
 BLUE "Installing Python flask..."
 sudo pip install flask
+
+BLUE "Installing Python colorama..."
+sudo pip install colorama
+
+BLUE "Installing Python passlib..."
+sudo pip install passlib
+
+BLUE "Installing Spotify..."
+sudo snap install spotify
+
+BLUE "Installing Binwalk..."
+sudo apt install -y binwalk
+
+BLUE "Installing Tesseract..."
+sudo apt install -y tesseract-ocr
+
