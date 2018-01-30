@@ -155,3 +155,6 @@ sudo apt install -y binwalk
 BLUE "Installing Tesseract..."
 sudo apt install -y tesseract-ocr
 
+BLUE "Installing Tesseract..."
+sudo apt install -y foremost
+
