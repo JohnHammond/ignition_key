@@ -162,9 +162,3 @@ sudo apt install -y foremost
 
 BLUE "Installing rot13..."
 sudo apt install -y bsdgames	
-
-
-BLUE "Installing rot13..."
-sudo apt install -y bsdgames
-
-
