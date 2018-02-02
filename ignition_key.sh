@@ -159,6 +159,9 @@ sudo apt install -y tesseract-ocr
 BLUE "Installing Tesseract..."
 sudo apt install -y foremost
 
+BLUE "Installing hexedit..."
+sudo apt install -y hexedit
+
 
 BLUE "Installing rot13..."
 sudo apt install -y bsdgames
