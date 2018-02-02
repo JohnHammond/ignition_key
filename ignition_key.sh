@@ -161,10 +161,8 @@ sudo apt install -y foremost
 
 
 BLUE "Installing rot13..."
-sudo apt install -y bsdgames	
-
-
-BLUE "Installing rot13..."
 sudo apt install -y bsdgames
 
+BLUE "Installing Python pwntools..."
+sudo pip install pwntools
 
