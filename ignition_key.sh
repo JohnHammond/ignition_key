@@ -112,7 +112,7 @@ dpkg -i vnc_server.deb
 rm vnc_server.deb
 
 BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..."
-grep "vncserver-x11-serviced.service PS1" /etc/rc.local
+grep "vncserver-x11-serviced.service" /etc/rc.local
 if [ $? -eq 1 ]
 then
 	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
@@ -169,3 +169,13 @@ sudo pip install pwntools
 
 BLUE "Installing Go..."
 sudo apt install -y golang-go
+grep "export GOPATH" ~/.bashrc
+if [ $? -eq 1 ]
+then
+	echo "export GOPATH=\$HOME/.go/" >> ~/.bashrc
+fi
+grep "export GOBIN" ~/.bashrc
+if [ $? -eq 1 ]
+then
+	echo "export GOBIN=\$HOME/.go/bin" >> ~/.bashrc
+fi
