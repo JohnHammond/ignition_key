@@ -166,3 +166,6 @@ sudo apt install -y hexedit
 
 BLUE "Installing Python pwntools..."
 sudo pip install pwntools
+
+BLUE "Installing Go..."
+sudo apt install -y golang-go
