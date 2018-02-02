@@ -155,10 +155,14 @@ sudo apt install -y binwalk
 BLUE "Installing Tesseract..."
 sudo apt install -y tesseract-ocr
 
-
-BLUE "Installing Tesseract..."
+BLUE "Installing foremost..."
 sudo apt install -y foremost
-
 
 BLUE "Installing rot13..."
 sudo apt install -y bsdgames	
+
+BLUE "Installing hexedit..."
+sudo apt install -y hexedit	
+
+BLUE "Installing Python pwntools..."
+sudo pip install pwntools
