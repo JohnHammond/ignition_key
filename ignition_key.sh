@@ -169,6 +169,7 @@ sudo pip install pwntools
 
 BLUE "Installing Go..."
 sudo apt install -y golang-go
+BLUE "Adding GOPATH and GOBIN to .bashrc, so future installs are easy.."
 grep "export GOPATH" ~/.bashrc
 if [ $? -eq 1 ]
 then
@@ -178,4 +179,11 @@ grep "export GOBIN" ~/.bashrc
 if [ $? -eq 1 ]
 then
 	echo "export GOBIN=\$HOME/.go/bin" >> ~/.bashrc
+	echo "export PATH=\$PATH:\$GOBIN" >> ~/.bashrc
 fi
+
+BLUE "Installing sqlite..."
+sudo apt install -y sqlite	
+
+BLUE "Installing zbarimg..."
+sudo apt install -y zbar-tools	
