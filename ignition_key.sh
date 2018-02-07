@@ -187,3 +187,6 @@ sudo apt install -y sqlite
 
 BLUE "Installing zbarimg..."
 sudo apt install -y zbar-tools	
+
+BLUE "Installing qrencode..."
+sudo apt install -y qrencode
