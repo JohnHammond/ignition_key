@@ -190,3 +190,6 @@ sudo apt install -y zbar-tools
 
 BLUE "Installing qrencode..."
 sudo apt install -y qrencode
+
+BLUE "Installing pdfcrack..."
+sudo apt install -y pdfcrack
