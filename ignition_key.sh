@@ -138,7 +138,10 @@ then
 fi
 
 BLUE "Installing Python flask..."
-sudo pip install flask
+sudo pip install 
+
+BLUE "Installing Python flask-login..."
+sudo pip install flask-login
 
 BLUE "Installing Python colorama..."
 sudo pip install colorama
@@ -203,7 +206,7 @@ rm Hopper-v4-4.3.14-Linux.deb
 BLUE "Installing Oracle Java 8..."
 echo "" | sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java8-installer
+sudo apt-get install -y oracle-java8-installer
 
 BLUE "Downloading stegsolve.jar..."
 wget "http://www.caesum.com/handbook/Stegsolve.jar" -O "stegsolve.jar"
