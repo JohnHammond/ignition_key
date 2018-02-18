@@ -188,6 +188,9 @@ fi
 BLUE "Installing sqlite..."
 sudo apt install -y sqlite	
 
+BLUE "Installing nikto..."
+sudo apt install -y nikto
+
 BLUE "Installing zbarimg..."
 sudo apt install -y zbar-tools	
 
