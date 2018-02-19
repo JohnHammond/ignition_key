@@ -200,6 +200,12 @@ sudo apt install -y qrencode
 BLUE "Installing pdfcrack..."
 sudo apt install -y pdfcrack
 
+BLUE "Installing Virtualbox..."
+sudo apt install -y virtualbox-qt
+
+BLUE "Installing Vagrant..."
+sudo apt install -y vagrant
+
 BLUE "Installing Hopper..."
 wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
 dpkg -i Hopper-v4-4.3.14-Linux.deb
