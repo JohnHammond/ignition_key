@@ -221,3 +221,5 @@ BLUE "Downloading stegsolve.jar..."
 wget "http://www.caesum.com/handbook/Stegsolve.jar" -O "stegsolve.jar"
 chmod +x "stegsolve.jar"
 
+BLUE "Installing fcrackzip..."
+sudo apt install -y fcrackzip
