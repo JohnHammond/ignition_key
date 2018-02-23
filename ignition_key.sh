@@ -223,3 +223,6 @@ chmod +x "stegsolve.jar"
 
 BLUE "Installing fcrackzip..."
 sudo apt install -y fcrackzip
+
+BLUE "Installing unrar..."
+sudo apt install -y unrar
