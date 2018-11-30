@@ -226,3 +226,6 @@ sudo apt install -y fcrackzip
 
 BLUE "Installing unrar..."
 sudo apt install -y unrar
+
+BLUE "Installing steghide..."
+sudo apt install -y steghide
