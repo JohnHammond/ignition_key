@@ -229,3 +229,6 @@ sudo apt install -y unrar
 
 BLUE "Installing steghide..."
 sudo apt install -y steghide
+
+BLUE "Installing ffmpeg..."
+sudo apt install -y ffmpeg
