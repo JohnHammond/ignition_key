@@ -232,3 +232,25 @@ sudo apt install -y steghide
 
 BLUE "Installing ffmpeg..."
 sudo apt install -y ffmpeg
+
+BLUE "Installing Python library netifaces..."
+sudo pip install netifaces
+
+BLUE "Installing Python library iptools..."
+sudo pip install iptools
+
+BLUE "Installing Python library OpenSSL..."
+sudo pip install pyopenssl
+
+
+BLUE "Installing Python library pydispatch..."
+sudo pip install pydispatch
+
+BLUE "Installing GIMP..."
+sudo apt install -y gimp
+
+BLUE "Installing cmake..."
+sudo apt install -y cmake
+
+BLUE "Installing mplayer..."
+sudo apt install -y mplayer
