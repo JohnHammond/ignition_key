@@ -261,3 +261,6 @@ sudo apt install -y sshpass
 
 BLUE "Installing tcpflow..."
 sudo apt install -y tcpflow
+
+BLUE "Installing Python scapy..."
+sudo pip install scapy
