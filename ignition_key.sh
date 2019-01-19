@@ -254,3 +254,10 @@ sudo apt install -y cmake
 
 BLUE "Installing mplayer..."
 sudo apt install -y mplayer
+
+
+BLUE "Installing sshpass..."
+sudo apt install -y sshpass
+
+BLUE "Installing tcpflow..."
+sudo apt install -y tcpflow
