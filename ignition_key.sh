@@ -264,3 +264,9 @@ sudo apt install -y tcpflow
 
 BLUE "Installing Python scapy..."
 sudo pip install scapy
+
+BLUE "Installing the thing that 7z2john.pl needs..."
+sudo apt install libcompress-raw-lzma-perl 
+
+BLUE "Installing dos2unix..."
+sudo apt install libcompress-raw-lzma-perl 
