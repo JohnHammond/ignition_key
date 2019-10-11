@@ -138,7 +138,7 @@ then
 fi
 
 BLUE "Installing Python flask..."
-sudo pip install 
+sudo pip install flask
 
 BLUE "Installing Python flask-login..."
 sudo pip install flask-login
