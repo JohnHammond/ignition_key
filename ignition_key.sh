@@ -269,4 +269,4 @@ BLUE "Installing the thing that 7z2john.pl needs..."
 sudo apt install libcompress-raw-lzma-perl 
 
 BLUE "Installing dos2unix..."
-sudo apt install libcompress-raw-lzma-perl
+sudo apt install dos2unix
