@@ -1,0 +1,157 @@
+- name: remove-home-dir
+  hosts: localhost
+  connection: local
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: remove directories
+      file:
+        path: "{{ item }}" 
+        state: absent
+      with_items:
+        - ~/Desktop
+        - ~/Documents
+        - ~/Downloads
+        - ~/Music
+        - ~/Pictures
+        - ~/Public
+        - ~/Templates
+        - ~/Videos
+  tags:
+      - remove-home-dir 
+
+- name: apt-tools
+  hosts: localhost
+  connection: local
+  become: true
+  ignore_errors: true
+  vars:
+    packages:
+      - apt-transport-https
+      - git
+      - simplescreenrecorder
+      - terminator
+      - taskwarrior
+      - python-pip
+      - guake
+      - openvpn
+      - nmap
+      - docker.io
+      - curl
+      - pinta
+      - exiftool
+      - sqlitebrowser
+      - wireshark
+      - idle
+      - xclip
+      - binwalk
+      - tesseract-ocr
+      - foremost
+      - bsdgames
+      - hexedit
+      - golang-go
+      - sqlite
+      - nikto
+      - zbar-tools
+      - qrencode
+      - pdfcrack
+      - virtualbox-qt
+      - vagrant
+      - fcrackzip
+      - unrar
+      - steghide
+      - ffmpeg
+      - gimp
+      - cmake
+      - mplayer
+      - sshpass
+      - tcpflow
+      - libcompress-raw-lzma-perl
+      - dos2unix
+      - atom
+  tasks:
+    - name: install apt-tools
+      apt:
+        name: "{{ item }}"
+        state: latest
+        update_cache: true
+      loop: "{{ packages }}"
+  tags:
+    - apt-tools
+
+- name: pip-tools
+  hosts: localhost
+  connection: local
+  become: true
+  ignore_errors: true
+  vars:
+    packages:
+      - flask
+      - flask-login
+      - colorama
+      - passlib
+      - pwntools
+      - netifaces
+      - iptools
+      - pyopenssl
+      - pydispatch
+      - scapy
+  tasks:
+    - name: install pip-tools
+      pip:
+        name: "{{ item }}"
+        state: latest
+        extra_args: --upgrade
+      loop: "{{ packages }}"
+  tags:
+    - pip-tools
+
+- name: sublime-text
+  hosts: localhost
+  connection: local
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: add pgp key
+      apt_key:
+        url: https://download.sublimetext.com/sublimehq-pub.gpg
+        state: present
+    - name: add repository
+      apt_repository:
+        repo: 'deb https://download.sublimetext.com/ apt/stable/'
+        state: present
+        filename: sublime-text.list
+        update_cache: yes
+    - name: install sublime-text
+      apt:
+        name: sublime-text
+        state: present
+        update_cache: true
+  tags:
+    - sublime-text
+
+- name: vnc-server
+  hosts: localhost
+  connection: local
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: install vnc-server from deb
+      apt:
+        deb: https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-Linux-x64.deb
+  tags:
+    - vnc-server
+
+- name: stegsolve
+  hosts: localhost
+  connection: localhost
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: download stegsolve
+      get_url:
+        url: http://www.caesum.com/handbook/Stegsolve.jar
+        dest: /root/stegsolve.jar
+        mode: +x
+  tags:
+    - stegsolve
