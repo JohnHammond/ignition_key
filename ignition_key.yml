@@ -142,4 +142,16 @@
   tags:
     - vnc-server
 
-
+- name: stegsolve
+  hosts: localhost
+  connection: localhost
+  become: true
+  ignore_errors: true
+  tasks:
+    - name: download stegsolve
+      get_url:
+        url: http://www.caesum.com/handbook/Stegsolve.jar
+        dest: /root/stegsolve.jar
+        mode: +x
+  tags:
+    - stegsolve
