@@ -27,8 +27,6 @@ then
 	exit
 fi
 
-
-
 BLUE "Updating repositories..."
 sudo apt update
 
@@ -211,7 +209,6 @@ wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
 dpkg -i Hopper-v4-4.3.14-Linux.deb
 rm Hopper-v4-4.3.14-Linux.deb
 
-
 BLUE "Installing Oracle Java 8..."
 echo "" | sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -242,7 +239,6 @@ sudo pip install iptools
 BLUE "Installing Python library OpenSSL..."
 sudo pip install pyopenssl
 
-
 BLUE "Installing Python library pydispatch..."
 sudo pip install pydispatch
 
@@ -255,7 +251,6 @@ sudo apt install -y cmake
 BLUE "Installing mplayer..."
 sudo apt install -y mplayer
 
-
 BLUE "Installing sshpass..."
 sudo apt install -y sshpass
 
@@ -266,7 +261,7 @@ BLUE "Installing Python scapy..."
 sudo pip install scapy
 
 BLUE "Installing the thing that 7z2john.pl needs..."
-sudo apt install libcompress-raw-lzma-perl 
+sudo apt install -y libcompress-raw-lzma-perl 
 
 BLUE "Installing dos2unix..."
-sudo apt install libcompress-raw-lzma-perl
+sudo apt install -y dos2unix
